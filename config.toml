@@ -1,0 +1,20 @@
+baseurl = ""
+languageCode = "en-gb"
+title = "Zac Kozlin's Data Science Blog"
+theme = "hpstr-hugo-theme"
+pluralizelisttitles = false
+PygmentsCodeFences = true
+Paginate = 5
+disqusShortname = "hpstrhugo"
+
+[params]
+	subtitle = ""
+	[params.author]
+		name = "Zac Kozlin"
+		avatar = "/images/profilepic.jpg"
+		bio = ""
+		github = "zkozli13"
+	[params.image]
+	  feature = "/images/background2.jpg"
+	  credit = "dargadgetz"
+	  creditlink = "http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/"

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Post &#8211; Zac Kozlin&#39;s Data Science Blog</title>
+<meta name="description" content="">
+
+    
+
+
+
+
+
+<meta name="twitter:title" content="Post">
+<meta name="twitter:description" content="">
+
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Post">
+<meta property="og:description" content="">
+<meta property="og:url" content="/post/">
+<meta property="og:site_name" content="Zac Kozlin&#39;s Data Science Blog">
+
+
+
+  <meta property="og:updated_time" content="2015-07-23T21:13:14-05:00"/>
+
+
+
+
+
+
+<link rel="canonical" href="/post/">
+
+  <link href="/post/index.xml" rel="alternate" type="application/rss+xml" title="Zac Kozlin&#39;s Data Science Blog" />
+  <link href="/post/index.xml" rel="feed" type="application/rss+xml" title="Zac Kozlin&#39;s Data Science Blog" />
+
+
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+
+<meta http-equiv="cleartype" content="on">
+
+<meta name="generator" content="Hugo 0.29" />
+
+<script src="/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+
+<link rel="shortcut icon" href="/favicon.png">
+
+
+</head>
+
+<body id="post-index" >
+<nav id="dl-menu" class="dl-menuwrapper" role="navigation" style="display:inline-block">
+	<button class="dl-trigger">Open Menu</button>
+	<ul class="dl-menu">
+		<li><a href="/">Home</a></li>
+		<li>
+			<a href="#">About</a>
+			<ul class="dl-submenu">
+			
+				<li>
+					
+					<img src="/images/profilepic.jpg" alt="Zac Kozlin's photo" class="author-photo">
+					
+					<h4>Zac Kozlin</h4>
+					<p></p>
+				</li>
+				<li><a href="/about/"><span class="btn btn-inverse">Learn More</span></a></li>
+				
+				
+				
+				
+				
+				<li>
+					<a href="https://github.com/zkozli13"><i class="fa fa-fw fa-github"></i> GitHub</a>
+				</li>
+				
+				
+				
+				
+			
+			</ul>
+		</li>
+		<li>
+			<a href="#">Posts</a>
+			<ul class="dl-submenu">
+				<li><a href="/posts/">All Posts</a></li>
+				<li><a href="/tags/">All Tags</a></li>
+			</ul>
+		</li>
+		
+	    <li><a href="/theme-setup/" >Theme Setup</a></li>
+	  
+	    <li><a href="http://mademistakes.com" target="_blank">External Link</a></li>
+	  
+	</ul>
+</nav>
+
+<div class="entry-header">
+  
+  <div class="header-title">
+    <div class="header-title-wrap">
+		<h1><a href="/" title="Go to the homepage">Zac Kozlin&#39;s Data Science Blog</a></h1>
+	  <h2>
+            
+            
+              Post
+            
+          </h2>
+    </div>
+  </div>
+</div>
+
+<div id="main" role="main">
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+         
+		<span class="entry-date date published updated"><time datetime="2015-07-23 21:13:14 -0500 -0500"><a href="/post/2015-07-23-r-rmarkdown/">Jul 23, 2015</a></time></span>
+        
+      <span class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        Reading time ~1 minute
+      </span>
+    </div>
+    
+	<h1 class="entry-title"><a href="/post/2015-07-23-r-rmarkdown/" rel="bookmark" title="Hello R Markdown" itemprop="url">Hello R Markdown</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <div id="r-markdown" class="section level1">
+<h1>R Markdown</h1>
+<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<p>You can embed an R code chunk like this:</p>
+<pre class="r"><code>summary(cars)
+##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+fit &lt;- lm(dist ~ speed, data = cars)
+fit
+## 
+## Call:
+## lm(formula = dist ~ speed, data = cars)
+## 
+## Coefficients:
+## (Intercept)        speed  
+##     -17.579        3.932</code></pre>
+</div>
+<div id="including-plots" class="section level1">
+<h1>Including Plots</h1>
+<p>You can also embed plots. See Figure <a href="#fig:pie">1</a> for example:</p>
+<pre class="r"><code>par(mar = c(0, 1, 0, 1))
+pie(
+  c(280, 60, 20),
+  c(&#39;Sky&#39;, &#39;Sunny side of pyramid&#39;, &#39;Shady side of pyramid&#39;),
+  col = c(&#39;#0292D8&#39;, &#39;#F7EA39&#39;, &#39;#C4B632&#39;),
+  init.angle = -50, border = NA
+)</code></pre>
+<div class="figure"><span id="fig:pie"></span>
+<img src="/post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png" alt="A fancy pie chart." width="672" />
+<p class="caption">
+Figure 1: A fancy pie chart.
+</p>
+</div>
+</div>
+
+  </div>
+</article>
+
+
+
+
+
+</div>
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    <span> Powered by <a href="https://gohugo.io/" rel="nofollow">Hugo</a> using the <a href="https://github.com/dldx/hpstr-hugo-theme" rel="nofollow">HPSTR</a> theme.</span>
+
+  </footer>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="\/js\/vendor\/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="/js/scripts.min.js"></script>
+
+
+
+</body>
+</html>
+
