@@ -18,7 +18,7 @@
       
       <guid>/posts/video-post/</guid>
       <description> Video embeds are responsive and scale with the width of the main content block with the help of FitVids.
-&amp;lt;iframewidth=&amp;#34;560&amp;#34;height=&amp;#34;315&amp;#34;src=&amp;#34;//www.youtube.com/embed/SU3kYxJmWuQ&amp;#34;frameborder=&amp;#34;0&amp;#34;&amp;gt;&amp;lt;/iframe&amp;gt; </description>
+&amp;lt;iframe width=&amp;#34;560&amp;#34; height=&amp;#34;315&amp;#34; src=&amp;#34;//www.youtube.com/embed/SU3kYxJmWuQ&amp;#34; frameborder=&amp;#34;0&amp;#34;&amp;gt;&amp;lt;/iframe&amp;gt;</description>
     </item>
     
   </channel>

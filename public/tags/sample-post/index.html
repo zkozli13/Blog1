@@ -52,7 +52,7 @@
 
 <meta http-equiv="cleartype" content="on">
 
-<meta name="generator" content="Hugo 0.29" />
+<meta name="generator" content="Hugo 0.31.1" />
 
 <script src="/js/vendor/modernizr-2.6.2.custom.min.js"></script>
 
@@ -144,8 +144,7 @@
   </header>
   <div class="entry-content">
     <p>Here be a sample post with a custom background image. To utilize this &ldquo;feature&rdquo; just add the following YAML to a post&rsquo;s front matter.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="">background: /images/filename.png</span></code></pre>
-</div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">background: /images/filename.png</code></pre></div>
 <p>This little bit of YAML makes the assumption that your background image asset is in the <code>/images</code> folder. If you place it somewhere else or are hotlinking from the web, just include the full http(s):// URL. Either way you should have a background image that is tiled.</p>
 
 <p>If you want to set a background image for the entire site just add <code>background: /images/filename.png</code> as a <a href="https://gohugo.io/overview/configuration/#examples">param</a> in your config and BOOM &mdash; background images on every page!</p>
@@ -183,56 +182,51 @@
 <h3 id="gfm-code-blocks">GFM Code Blocks</h3>
 
 <p>GitHub Flavored Markdown <a href="https://help.github.com/articles/creating-and-highlighting-code-blocks/">fenced code blocks</a> are supported. To modify styling and highlight colors edit <code>/_sass/syntax.scss</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="">#</span><span style="">container</span><span style=""> </span><span style="">{</span><span style="">
-</span><span style="">  </span><span style="color:#66d9ef">float</span><span style=""></span><span style="">:</span><span style=""> </span><span style="color:#66d9ef">left</span><span style="">;</span><span style="">
-</span><span style="">  </span><span style="color:#66d9ef">margin</span><span style=""></span><span style="">:</span><span style=""> </span><span style="color:#ae81ff">0</span><span style=""> </span><span style="color:#ae81ff">-240</span><span style="color:#66d9ef">px</span><span style=""> </span><span style="color:#ae81ff">0</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style="">
-</span><span style="">  </span><span style="color:#66d9ef">width</span><span style=""></span><span style="">:</span><span style=""> </span><span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span><span style="">;</span><span style="">
-</span><span style=""></span><span style="">}</span></code></pre>
-</div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scss" data-lang="scss"><span style="">.highlight {
-</span><span style="">  margin: 0;
-</span><span style="">  padding: 1em;
-</span><span style="">  font-family: $monospace;
-</span><span style="">  font-size: $type-size-7;
-</span><span style="">  line-height: 1.8;
-</span><span style="">}</span></code></pre>
-</div>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="">&lt;</span><span style=""></span><span style="color:#f92672">nav</span><span style=""> </span><span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style=""></span><span style="color:#e6db74">&#34;pagination&#34;</span><span style=""> </span><span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style=""></span><span style="color:#e6db74">&#34;navigation&#34;</span><span style=""></span><span style=""></span><span style="">&gt;</span><span style="">
-</span><span style="">  {% if page.previous %}
-</span><span style="">    </span><span style="">&lt;</span><span style=""></span><span style="color:#f92672">a</span><span style=""> </span><span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style=""></span><span style="color:#e6db74">&#34;{{ site.url }}{{ page.previous.url }}&#34;</span><span style=""> </span><span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style=""></span><span style="color:#e6db74">&#34;btn&#34;</span><span style=""> </span><span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style=""></span><span style="color:#e6db74">&#34;{{ page.previous.title }}&#34;</span><span style=""></span><span style=""></span><span style="">&gt;</span><span style="">Previous article</span><span style="">&lt;</span><span style=""></span><span style="">/</span><span style=""></span><span style="color:#f92672">a</span><span style=""></span><span style="">&gt;</span><span style="">
-</span><span style="">  {% endif %}
-</span><span style="">  {% if page.next %}
-</span><span style="">    </span><span style="">&lt;</span><span style=""></span><span style="color:#f92672">a</span><span style=""> </span><span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style=""></span><span style="color:#e6db74">&#34;{{ site.url }}{{ page.next.url }}&#34;</span><span style=""> </span><span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style=""></span><span style="color:#e6db74">&#34;btn&#34;</span><span style=""> </span><span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style=""></span><span style="color:#e6db74">&#34;{{ page.next.title }}&#34;</span><span style=""></span><span style=""></span><span style="">&gt;</span><span style="">Next article</span><span style="">&lt;</span><span style=""></span><span style="">/</span><span style=""></span><span style="color:#f92672">a</span><span style=""></span><span style="">&gt;</span><span style="">
-</span><span style="">  {% endif %}
-</span><span style=""></span><span style="">&lt;</span><span style=""></span><span style="">/</span><span style=""></span><span style="color:#f92672">nav</span><span style=""></span><span style="">&gt;</span><span style="color:#75715e">&lt;!-- /.pagination --&gt;</span></code></pre>
-</div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">#container {
+  <span style="color:#66d9ef">float</span>: <span style="color:#66d9ef">left</span>;
+  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">-240</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+}</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scss" data-lang="scss"><span style="color:#a6e22e">.highlight</span> {
+  <span style="color:#f92672">margin</span><span style="color:#a6e22e">:</span> <span style="color:#f92672">0</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">padding</span><span style="color:#a6e22e">:</span> <span style="color:#f92672">1em</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">font-family</span><span style="color:#a6e22e">:</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#f92672">monospace</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">font-size</span><span style="color:#a6e22e">:</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#f92672">type-size-7</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">line-height</span><span style="color:#a6e22e">:</span> <span style="color:#f92672">1</span><span style="color:#a6e22e">.8</span><span style="color:#f92672">;</span>
+}</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">nav</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pagination&#34;</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navigation&#34;</span>&gt;
+  {% if page.previous %}
+    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ site.url }}{{ page.previous.url }}&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ page.previous.title }}&#34;</span>&gt;Previous article&lt;/<span style="color:#f92672">a</span>&gt;
+  {% endif %}
+  {% if page.next %}
+    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ site.url }}{{ page.next.url }}&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ page.next.title }}&#34;</span>&gt;Next article&lt;/<span style="color:#f92672">a</span>&gt;
+  {% endif %}
+&lt;/<span style="color:#f92672">nav</span>&gt;<span style="color:#75715e">&lt;!-- /.pagination --&gt;</span></code></pre></div>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">1</span><span style="">&lt;</span><span style=""></span><span style="color:#f92672">nav</span><span style=""> </span><span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style=""></span><span style="color:#e6db74">&#34;pagination&#34;</span><span style=""> </span><span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style=""></span><span style="color:#e6db74">&#34;navigation&#34;</span><span style=""></span><span style=""></span><span style="">&gt;</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">2</span><span style="">  {% if page.previous %}
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">3</span><span style="">    </span><span style="">&lt;</span><span style=""></span><span style="color:#f92672">a</span><span style=""> </span><span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style=""></span><span style="color:#e6db74">&#34;{{ site.url }}{{ page.previous.url }}&#34;</span><span style=""> </span><span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style=""></span><span style="color:#e6db74">&#34;btn&#34;</span><span style=""> </span><span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style=""></span><span style="color:#e6db74">&#34;{{ page.previous.title }}&#34;</span><span style=""></span><span style=""></span><span style="">&gt;</span><span style="">Previous article</span><span style="">&lt;</span><span style=""></span><span style="">/</span><span style=""></span><span style="color:#f92672">a</span><span style=""></span><span style="">&gt;</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">4</span><span style="">  {% endif %}
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">5</span><span style="">  {% if page.next %}
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">6</span><span style="">    </span><span style="">&lt;</span><span style=""></span><span style="color:#f92672">a</span><span style=""> </span><span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style=""></span><span style="color:#e6db74">&#34;{{ site.url }}{{ page.next.url }}&#34;</span><span style=""> </span><span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style=""></span><span style="color:#e6db74">&#34;btn&#34;</span><span style=""> </span><span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style=""></span><span style="color:#e6db74">&#34;{{ page.next.title }}&#34;</span><span style=""></span><span style=""></span><span style="">&gt;</span><span style="">Next article</span><span style="">&lt;</span><span style=""></span><span style="">/</span><span style=""></span><span style="color:#f92672">a</span><span style=""></span><span style="">&gt;</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">7</span><span style="">  {% endif %}
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">8</span><span style=""></span><span style="">&lt;</span><span style=""></span><span style="">/</span><span style=""></span><span style="color:#f92672">nav</span><span style=""></span><span style="">&gt;</span><span style="color:#75715e">&lt;!-- /.pagination --&gt;</span></code></pre>
-</div>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">module</span><span style=""> </span><span style="">Jekyll</span><span style="">
-</span><span style="">  </span><span style="color:#66d9ef">class</span><span style=""> </span><span style="color:#a6e22e">TagIndex</span><span style=""> </span><span style="color:#f92672">&lt;</span><span style=""> </span><span style="color:#66d9ef">Page</span><span style="">
-</span><span style="">    </span><span style="color:#66d9ef">def</span><span style=""> </span><span style="color:#a6e22e"></span><span style="color:#f92672"></span><span style="color:#a6e22e">initialize</span><span style="">(</span><span style="">site</span><span style="">,</span><span style=""> </span><span style="">base</span><span style="">,</span><span style=""> </span><span style="">dir</span><span style="">,</span><span style=""> </span><span style="">tag</span><span style="">)</span><span style="">
-</span><span style="">      </span><span style="">@site</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">site</span><span style="">
-</span><span style="">      </span><span style="">@base</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">base</span><span style="">
-</span><span style="">      </span><span style="">@dir</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">dir</span><span style="">
-</span><span style="">      </span><span style="">@name</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#e6db74">&#39;index.html&#39;</span><span style="">
-</span><span style="">      </span><span style="">self</span><span style="color:#f92672">.</span><span style="">process</span><span style="">(</span><span style="">@name</span><span style="">)</span><span style="">
-</span><span style="">      </span><span style="">self</span><span style="color:#f92672">.</span><span style="">read_yaml</span><span style="">(</span><span style="color:#66d9ef">File</span><span style="color:#f92672">.</span><span style="">join</span><span style="">(</span><span style="">base</span><span style="">,</span><span style=""> </span><span style="color:#e6db74">&#39;_layouts&#39;</span><span style="">),</span><span style=""> </span><span style="color:#e6db74">&#39;tag_index.html&#39;</span><span style="">)</span><span style="">
-</span><span style="">      </span><span style="">self</span><span style="color:#f92672">.</span><span style="">data</span><span style="color:#f92672">[</span><span style="color:#e6db74">&#39;tag&#39;</span><span style="color:#f92672">]</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">tag</span><span style="">
-</span><span style="">      </span><span style="">tag_title_prefix</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">site</span><span style="color:#f92672">.</span><span style="">config</span><span style="color:#f92672">[</span><span style="color:#e6db74">&#39;tag_title_prefix&#39;</span><span style="color:#f92672">]</span><span style=""> </span><span style="color:#f92672">||</span><span style=""> </span><span style="color:#e6db74">&#39;Tagged: &#39;</span><span style="">
-</span><span style="">      </span><span style="">tag_title_suffix</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">site</span><span style="color:#f92672">.</span><span style="">config</span><span style="color:#f92672">[</span><span style="color:#e6db74">&#39;tag_title_suffix&#39;</span><span style="color:#f92672">]</span><span style=""> </span><span style="color:#f92672">||</span><span style=""> </span><span style="color:#e6db74">&#39;–&#39;</span><span style="">
-</span><span style="">      </span><span style="">self</span><span style="color:#f92672">.</span><span style="">data</span><span style="color:#f92672">[</span><span style="color:#e6db74">&#39;title&#39;</span><span style="color:#f92672">]</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span><span style="">tag_title_prefix</span><span style="color:#e6db74">}#{</span><span style="">tag</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span><span style="">
-</span><span style="">      </span><span style="">self</span><span style="color:#f92672">.</span><span style="">data</span><span style="color:#f92672">[</span><span style="color:#e6db74">&#39;description&#39;</span><span style="color:#f92672">]</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#e6db74">&#34;An archive of posts tagged </span><span style="color:#e6db74">#{</span><span style="">tag</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.&#34;</span><span style="">
-</span><span style="">    </span><span style="color:#66d9ef">end</span><span style="">
-</span><span style="">  </span><span style="color:#66d9ef">end</span><span style="">
-</span><span style=""></span><span style="color:#66d9ef">end</span></code></pre>
-</div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">1</span>&lt;<span style="color:#f92672">nav</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pagination&#34;</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navigation&#34;</span>&gt;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">2</span>  {% if page.previous %}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">3</span>    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ site.url }}{{ page.previous.url }}&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ page.previous.title }}&#34;</span>&gt;Previous article&lt;/<span style="color:#f92672">a</span>&gt;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">4</span>  {% endif %}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">5</span>  {% if page.next %}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">6</span>    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ site.url }}{{ page.next.url }}&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ page.next.title }}&#34;</span>&gt;Next article&lt;/<span style="color:#f92672">a</span>&gt;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">7</span>  {% endif %}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">8</span>&lt;/<span style="color:#f92672">nav</span>&gt;<span style="color:#75715e">&lt;!-- /.pagination --&gt;</span></code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">module</span> Jekyll
+  <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TagIndex</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">Page</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e"></span><span style="color:#f92672"></span><span style="color:#a6e22e">initialize</span>(site, base, dir, tag)
+      @site <span style="color:#f92672">=</span> site
+      @base <span style="color:#f92672">=</span> base
+      @dir <span style="color:#f92672">=</span> dir
+      @name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;index.html&#39;</span>
+      self<span style="color:#f92672">.</span>process(@name)
+      self<span style="color:#f92672">.</span>read_yaml(<span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>join(base, <span style="color:#e6db74">&#39;_layouts&#39;</span>), <span style="color:#e6db74">&#39;tag_index.html&#39;</span>)
+      self<span style="color:#f92672">.</span>data<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;tag&#39;</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> tag
+      tag_title_prefix <span style="color:#f92672">=</span> site<span style="color:#f92672">.</span>config<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;tag_title_prefix&#39;</span><span style="color:#f92672">]</span> <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39;Tagged: &#39;</span>
+      tag_title_suffix <span style="color:#f92672">=</span> site<span style="color:#f92672">.</span>config<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;tag_title_suffix&#39;</span><span style="color:#f92672">]</span> <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39;–&#39;</span>
+      self<span style="color:#f92672">.</span>data<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;title&#39;</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>tag_title_prefix<span style="color:#e6db74">}#{</span>tag<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+      self<span style="color:#f92672">.</span>data<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;description&#39;</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;An archive of posts tagged </span><span style="color:#e6db74">#{</span>tag<span style="color:#e6db74">}</span><span style="color:#e6db74">.&#34;</span>
+    <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span></code></pre></div>
 <h3 id="code-blocks-in-lists">Code Blocks in Lists</h3>
 
 <p>Indentation matters. Be sure the indent of the code block aligns with the first non-space character after the list item marker (e.g., <code>1.</code>). Usually this will mean indenting 3 spaces instead of 4.</p>
@@ -241,12 +235,11 @@
 <li>Do step 1.</li>
 <li>Now do this:</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="">   </span><span style="color:#66d9ef">def</span><span style=""> </span><span style="color:#a6e22e"></span><span style="color:#f92672"></span><span style="color:#a6e22e">print_hi</span><span style="">(</span><span style="">name</span><span style="">)</span><span style="">
-</span><span style="">     </span><span style="">puts</span><span style=""> </span><span style="color:#e6db74">&#34;Hi, </span><span style="color:#e6db74">#{</span><span style="">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span><span style="">
-</span><span style="">   </span><span style="color:#66d9ef">end</span><span style="">
-</span><span style="">   </span><span style="">print_hi</span><span style="">(</span><span style="color:#e6db74">&#39;Tom&#39;</span><span style="">)</span><span style="">
-</span><span style="">   </span><span style="color:#75715e">#=&gt; prints &#39;Hi, Tom&#39; to STDOUT.</span></code></pre>
-</div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">   <span style="color:#66d9ef">def</span> <span style="color:#a6e22e"></span><span style="color:#f92672"></span><span style="color:#a6e22e">print_hi</span>(name)
+     puts <span style="color:#e6db74">&#34;Hi, </span><span style="color:#e6db74">#{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+   <span style="color:#66d9ef">end</span>
+   print_hi(<span style="color:#e6db74">&#39;Tom&#39;</span>)
+   <span style="color:#75715e">#=&gt; prints &#39;Hi, Tom&#39; to STDOUT.</span></code></pre></div>
 <ol>
 <li>Now you can do this.</li>
 </ol>
@@ -255,7 +248,7 @@
 
 <p>An example of a Gist embed below.</p>
 
-<p><script src="//gist.github.com/mmistakes/6589546.js"></script></p>
+<script src="//gist.github.com/mmistakes/6589546.js"></script>
 <div class="footnotes">
 
 <hr />
@@ -311,8 +304,7 @@
     <iframe width="560" height="315" src="//www.youtube.com/embed/SU3kYxJmWuQ" frameborder="0"></iframe>
 
 <p>Video embeds are responsive and scale with the width of the main content block with the help of <a href="http://fitvidsjs.com/">FitVids</a>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="">&lt;</span><span style=""></span><span style="color:#f92672">iframe</span><span style=""> </span><span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style=""></span><span style="color:#e6db74">&#34;560&#34;</span><span style=""> </span><span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style=""></span><span style="color:#e6db74">&#34;315&#34;</span><span style=""> </span><span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style=""></span><span style="color:#e6db74">&#34;//www.youtube.com/embed/SU3kYxJmWuQ&#34;</span><span style=""> </span><span style="color:#a6e22e">frameborder</span><span style="color:#f92672">=</span><span style=""></span><span style="color:#e6db74">&#34;0&#34;</span><span style=""></span><span style=""></span><span style="">&gt;&lt;</span><span style=""></span><span style="">/</span><span style=""></span><span style="color:#f92672">iframe</span><span style=""></span><span style="">&gt;</span></code></pre>
-</div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">iframe</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;560&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;315&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;//www.youtube.com/embed/SU3kYxJmWuQ&#34;</span> <span style="color:#a6e22e">frameborder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>&gt;&lt;/<span style="color:#f92672">iframe</span>&gt;</code></pre></div>
   </div>
 </article>
 

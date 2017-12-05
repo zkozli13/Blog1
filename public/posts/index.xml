@@ -18,7 +18,7 @@
       
       <guid>/posts/background-image/</guid>
       <description>Here be a sample post with a custom background image. To utilize this &amp;ldquo;feature&amp;rdquo; just add the following YAML to a post&amp;rsquo;s front matter.
-background: /images/filename.png  This little bit of YAML makes the assumption that your background image asset is in the /images folder. If you place it somewhere else or are hotlinking from the web, just include the full http(s):// URL. Either way you should have a background image that is tiled.</description>
+background: /images/filename.png This little bit of YAML makes the assumption that your background image asset is in the /images folder. If you place it somewhere else or are hotlinking from the web, just include the full http(s):// URL. Either way you should have a background image that is tiled.</description>
     </item>
     
     <item>
@@ -47,7 +47,7 @@ GFM Code Blocks GitHub Flavored Markdown fenced code blocks are supported.</desc
       
       <guid>/posts/video-post/</guid>
       <description> Video embeds are responsive and scale with the width of the main content block with the help of FitVids.
-&amp;lt;iframewidth=&amp;#34;560&amp;#34;height=&amp;#34;315&amp;#34;src=&amp;#34;//www.youtube.com/embed/SU3kYxJmWuQ&amp;#34;frameborder=&amp;#34;0&amp;#34;&amp;gt;&amp;lt;/iframe&amp;gt; </description>
+&amp;lt;iframe width=&amp;#34;560&amp;#34; height=&amp;#34;315&amp;#34; src=&amp;#34;//www.youtube.com/embed/SU3kYxJmWuQ&amp;#34; frameborder=&amp;#34;0&amp;#34;&amp;gt;&amp;lt;/iframe&amp;gt;</description>
     </item>
     
     <item>
