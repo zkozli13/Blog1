@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>Sample Link Post</title>
+      <title>Time Series</title>
       <link>/posts/sample-link-post/</link>
       <pubDate>Mon, 12 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>/posts/sample-link-post/</guid>
-      <description>This theme supports link posts, made famous by John Gruber. To use, just add link: http://url-you-want-linked to the post&amp;rsquo;s YAML front matter and you&amp;rsquo;re done.</description>
+      <description>The last way of visually representing data is through a time series plot. A time series plot displays values against time. They are similar to x-y graphs, but while an x-y graph can plot a variety of &amp;ldquo;x&amp;rdquo; variables (for example, height, weight, age), timeplots can only display time on the x-axis. Unlike pie charts and bar charts, these plots do not have categories. Timeplots are good for showing how data changes over time.</description>
     </item>
     
   </channel>

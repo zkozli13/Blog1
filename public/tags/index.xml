@@ -30,24 +30,6 @@
     </item>
     
     <item>
-      <title>Images</title>
-      <link>/tags/images/</link>
-      <pubDate>Wed, 22 May 2013 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/images/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Intro</title>
-      <link>/tags/intro/</link>
-      <pubDate>Tue, 22 May 2012 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/intro/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Link Post</title>
       <link>/tags/link-post/</link>
       <pubDate>Mon, 12 Aug 2013 00:00:00 +0000</pubDate>
@@ -57,56 +39,11 @@
     </item>
     
     <item>
-      <title>Plot</title>
-      <link>/tags/plot/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/tags/plot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R Markdown</title>
-      <link>/tags/r-markdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/tags/r-markdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Readability</title>
-      <link>/tags/readability/</link>
-      <pubDate>Thu, 23 May 2013 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/readability/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Regression</title>
-      <link>/tags/regression/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/tags/regression/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Sample Post</title>
       <link>/tags/sample-post/</link>
       <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>/tags/sample-post/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>/tags/test/</link>
-      <pubDate>Wed, 22 May 2013 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/test/</guid>
       <description></description>
     </item>
     

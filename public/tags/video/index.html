@@ -139,14 +139,20 @@
       </span>
     </div>
     
-	<h1 class="entry-title"><a href="/posts/video-post/" rel="bookmark" title="A Post with a Video" itemprop="url">A Post with a Video</a></h1>
+	<h1 class="entry-title"><a href="/posts/video-post/" rel="bookmark" title="Barplot" itemprop="url">Barplot</a></h1>
     
   </header>
   <div class="entry-content">
-    <iframe width="560" height="315" src="//www.youtube.com/embed/SU3kYxJmWuQ" frameborder="0"></iframe>
+    <p>Data Visualization is an important concept in data science. Here we will be using a bar plot as an example of data visualization. A bar chart or bar graph is a chart or graph that presents categorical data with rectangular bars with heights or lengths proportional to the values that they represent.</p>
 
-<p>Video embeds are responsive and scale with the width of the main content block with the help of <a href="http://fitvidsjs.com/">FitVids</a>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">iframe</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;560&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;315&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;//www.youtube.com/embed/SU3kYxJmWuQ&#34;</span> <span style="color:#a6e22e">frameborder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>&gt;&lt;/<span style="color:#f92672">iframe</span>&gt;</code></pre></div>
+<p>First we will install the necessary packages for this example:</p>
+
+<p>In this example we will be looking at all of the homerun totals of all of the teams in the MLB during the 1980&rsquo;s:</p>
+
+<p>This part of the example allows us to order the bar plot in any way we want:</p>
+
+<p>geom_bar allows us to make the height of the bar proportional to the number of cases in each group coord_flip() flips the axis of the plot</p>
+
   </div>
 </article>
 

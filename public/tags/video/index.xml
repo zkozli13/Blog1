@@ -12,13 +12,14 @@
     
     
     <item>
-      <title>A Post with a Video</title>
+      <title>Barplot</title>
       <link>/posts/video-post/</link>
       <pubDate>Tue, 25 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>/posts/video-post/</guid>
-      <description> Video embeds are responsive and scale with the width of the main content block with the help of FitVids.
-&amp;lt;iframe width=&amp;#34;560&amp;#34; height=&amp;#34;315&amp;#34; src=&amp;#34;//www.youtube.com/embed/SU3kYxJmWuQ&amp;#34; frameborder=&amp;#34;0&amp;#34;&amp;gt;&amp;lt;/iframe&amp;gt;</description>
+      <description>Data Visualization is an important concept in data science. Here we will be using a bar plot as an example of data visualization. A bar chart or bar graph is a chart or graph that presents categorical data with rectangular bars with heights or lengths proportional to the values that they represent.
+First we will install the necessary packages for this example:
+In this example we will be looking at all of the homerun totals of all of the teams in the MLB during the 1980&amp;rsquo;s:</description>
     </item>
     
   </channel>

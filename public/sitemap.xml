@@ -3,15 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/about/</loc>
-  </url>
-  
-  <url>
-    <loc>/post/2015-07-23-r-rmarkdown/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/posts/background-image/</loc>
     <lastmod>2013-10-26T00:00:00+00:00</lastmod>
   </url>
@@ -32,23 +23,11 @@
   </url>
   
   <url>
-    <loc>/posts/readability-feature-post/</loc>
-    <lastmod>2013-05-23T00:00:00+00:00</lastmod>
+    <loc>/about/</loc>
   </url>
   
   <url>
-    <loc>/posts/sample-post-images/</loc>
-    <lastmod>2013-05-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/readability-post/</loc>
-    <lastmod>2012-05-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/sample-post/</loc>
-    <lastmod>2011-03-10T00:00:00+00:00</lastmod>
+    <loc>/theme-setup/</loc>
   </url>
   
   <url>
@@ -69,62 +48,14 @@
   </url>
   
   <url>
-    <loc>/tags/images/</loc>
-    <lastmod>2013-05-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/intro/</loc>
-    <lastmod>2012-05-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/link-post/</loc>
     <lastmod>2013-08-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/plot/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/posts/</loc>
     <lastmod>2013-10-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/r/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/r-markdown/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/readability/</loc>
-    <lastmod>2013-05-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/regression/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -141,16 +72,6 @@
   </url>
   
   <url>
-    <loc>/tags/test/</loc>
-    <lastmod>2013-05-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/theme-setup/</loc>
-  </url>
-  
-  <url>
     <loc>/tags/video/</loc>
     <lastmod>2013-06-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -158,7 +79,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+    <lastmod>2013-10-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
