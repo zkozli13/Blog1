@@ -131,7 +131,7 @@
     
     <div class="entry-meta">
          
-		<span class="entry-date date published updated"><time datetime="2013-08-16 00:00:00 &#43;0000 UTC"><a href="/posts/code-highlighting-post/">Aug 16, 2013</a></time></span>
+		<span class="entry-date date published updated"><time datetime="2013-08-16 00:00:00 &#43;0000 UTC"><a href="/posts/scatterplot/">Aug 16, 2013</a></time></span>
         
       <span class="entry-reading-time">
         <i class="fa fa-clock-o"></i>
@@ -139,11 +139,28 @@
       </span>
     </div>
     
-	<h1 class="entry-title"><a href="/posts/code-highlighting-post/" rel="bookmark" title="Scatterplot" itemprop="url">Scatterplot</a></h1>
+	<h1 class="entry-title"><a href="/posts/scatterplot/" rel="bookmark" title="Scatterplot" itemprop="url">Scatterplot</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>Another way to visually represent data is by using a scatterplot. A scatterplot is a type of plot or mathematical diagram using Cartesian coordinates to display values for typically two variables for a set of data.</p>
+    <p>This is the code used in rstudio to make barplots using the lahman dataset.</p>
+
+<p>extracting the data&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+
+<p>query&lt;- &ldquo;SELECT playerID,sum(HR) as career_HR,sum(SO) as career_SO
+FROM Batting
+GROUP BY playerID
+HAVING sum(HR)&gt;=400&rdquo;</p>
+
+<p>result&lt;- sqldf(query)</p>
+
+<p>visualizing the data&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</p>
+
+<p>ggplot()+
+  geom_point(data=result,aes(x=career_SO,y=career_HR,color=&ldquo;blue&rdquo;))+
+  ggtitle(&ldquo;Career Strikeouts VS Homeruns for Great Hitters&rdquo;)+
+  xlab(&ldquo;Career Strikeouts&rdquo;)+
+  ylab(&ldquo;Career Homeruns&rdquo;)</p>
 
   </div>
 </article>

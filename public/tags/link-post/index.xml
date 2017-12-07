@@ -13,11 +13,16 @@
     
     <item>
       <title>Time Series</title>
-      <link>/posts/sample-link-post/</link>
+      <link>/posts/timeseries/</link>
       <pubDate>Mon, 12 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>/posts/sample-link-post/</guid>
-      <description>The last way of visually representing data is through a time series plot. A time series plot displays values against time. They are similar to x-y graphs, but while an x-y graph can plot a variety of &amp;ldquo;x&amp;rdquo; variables (for example, height, weight, age), timeplots can only display time on the x-axis. Unlike pie charts and bar charts, these plots do not have categories. Timeplots are good for showing how data changes over time.</description>
+      <guid>/posts/timeseries/</guid>
+      <description>This is the code used in Rstudio to make a time series using the lahman data set.
+# extracting the data&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
+query&amp;lt;- &amp;ldquo;SELECT yearID,HR FROM Batting WHERE playerID = &amp;lsquo;ruthba01&amp;rsquo;&amp;rdquo;
+result&amp;lt;- sqldf(query)
+# visualize the data&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-
+ggplot()+ geom_line(data=result,aes(x=yearID,y=HR))+ geom_point(data=result,aes(x=yearID,y=HR))+ ggtitle(&amp;ldquo;Ruth&amp;rsquo;s homerun Totals Through the Years&amp;rdquo;)+ xlab(&amp;ldquo;year&amp;rdquo;)+ ylab(&amp;ldquo;homeruns&amp;rdquo;)</description>
     </item>
     
   </channel>

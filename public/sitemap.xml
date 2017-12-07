@@ -3,22 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/posts/background-image/</loc>
+    <loc>/posts/histograms/</loc>
     <lastmod>2013-10-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/code-highlighting-post/</loc>
+    <loc>/posts/scatterplot/</loc>
     <lastmod>2016-09-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/sample-link-post/</loc>
+    <loc>/posts/timeseries/</loc>
     <lastmod>2013-08-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/video-post/</loc>
+    <loc>/posts/barplot/</loc>
     <lastmod>2013-06-25T00:00:00+00:00</lastmod>
   </url>
   

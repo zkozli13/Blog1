@@ -143,7 +143,7 @@
     
     <div class="entry-meta">
          
-		<span class="entry-date date published updated"><time datetime="2013-10-26 00:00:00 &#43;0000 UTC"><a href="/posts/background-image/">Oct 26, 2013</a></time></span>
+		<span class="entry-date date published updated"><time datetime="2013-10-26 00:00:00 &#43;0000 UTC"><a href="/posts/histograms/">Oct 26, 2013</a></time></span>
         
       <span class="entry-reading-time">
         <i class="fa fa-clock-o"></i>
@@ -151,15 +151,24 @@
       </span>
     </div>
     
-	<h1 class="entry-title"><a href="/posts/background-image/" rel="bookmark" title="Histograms" itemprop="url">Histograms</a></h1>
+	<h1 class="entry-title"><a href="/posts/histograms/" rel="bookmark" title="Histograms" itemprop="url">Histograms</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>One other way to visually represent data is by inserting the data into a histogram chart. A histogram is a diagram consisting of rectangles whose area is proportional to the frequency of a variable and whose width is equal to the class interval.</p>
+    <p>This is the code used in Rstudio to make a Histogram using the lahman data set.</p>
 
-<p>First we will import the necessary packages:</p>
+<p># extracting the data&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</p>
 
-<p>Now we will use the following syntax to represent the data in a histogram chart:</p>
+<p>query&lt;- &ldquo;SELECT weight
+FROM Master&rdquo;</p>
+
+<p>result&lt;- sqldf(query)</p>
+
+<p># visualize the data&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</p>
+
+<p>ggplot()+
+  geom_histogram(data=result,aes(x=weight,color=&ldquo;blue&rdquo;,fill=&ldquo;white&rdquo;))+
+  ggtitle(&ldquo;Baseball Player Weight Distribution&rdquo;)</p>
 
   </div>
 </article>
@@ -169,7 +178,7 @@
     
     <div class="entry-meta">
          
-		<span class="entry-date date published updated"><time datetime="2013-08-16 00:00:00 &#43;0000 UTC"><a href="/posts/code-highlighting-post/">Aug 16, 2013</a></time></span>
+		<span class="entry-date date published updated"><time datetime="2013-08-16 00:00:00 &#43;0000 UTC"><a href="/posts/scatterplot/">Aug 16, 2013</a></time></span>
         
       <span class="entry-reading-time">
         <i class="fa fa-clock-o"></i>
@@ -177,11 +186,28 @@
       </span>
     </div>
     
-	<h1 class="entry-title"><a href="/posts/code-highlighting-post/" rel="bookmark" title="Scatterplot" itemprop="url">Scatterplot</a></h1>
+	<h1 class="entry-title"><a href="/posts/scatterplot/" rel="bookmark" title="Scatterplot" itemprop="url">Scatterplot</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>Another way to visually represent data is by using a scatterplot. A scatterplot is a type of plot or mathematical diagram using Cartesian coordinates to display values for typically two variables for a set of data.</p>
+    <p>This is the code used in rstudio to make barplots using the lahman dataset.</p>
+
+<p>extracting the data&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+
+<p>query&lt;- &ldquo;SELECT playerID,sum(HR) as career_HR,sum(SO) as career_SO
+FROM Batting
+GROUP BY playerID
+HAVING sum(HR)&gt;=400&rdquo;</p>
+
+<p>result&lt;- sqldf(query)</p>
+
+<p>visualizing the data&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</p>
+
+<p>ggplot()+
+  geom_point(data=result,aes(x=career_SO,y=career_HR,color=&ldquo;blue&rdquo;))+
+  ggtitle(&ldquo;Career Strikeouts VS Homeruns for Great Hitters&rdquo;)+
+  xlab(&ldquo;Career Strikeouts&rdquo;)+
+  ylab(&ldquo;Career Homeruns&rdquo;)</p>
 
   </div>
 </article>
@@ -191,7 +217,7 @@
     
     <div class="entry-meta">
          
-		<span class="entry-date date published updated"><time datetime="2013-08-12 00:00:00 &#43;0000 UTC"><a href="/posts/sample-link-post/">Aug 12, 2013</a></time></span>
+		<span class="entry-date date published updated"><time datetime="2013-08-12 00:00:00 &#43;0000 UTC"><a href="/posts/timeseries/">Aug 12, 2013</a></time></span>
         
       <span class="entry-reading-time">
         <i class="fa fa-clock-o"></i>
@@ -199,13 +225,28 @@
       </span>
     </div>
     
-	<h1 class="entry-title"><a href="/posts/sample-link-post/" rel="bookmark" title="Time Series" itemprop="url">Time Series</a></h1>
+	<h1 class="entry-title"><a href="/posts/timeseries/" rel="bookmark" title="Time Series" itemprop="url">Time Series</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>The last way of visually representing data is through a time series plot. A time series plot displays values against time. They are similar to x-y graphs, but while an x-y graph can plot a variety of &ldquo;x&rdquo; variables (for example, height, weight, age), timeplots can only display time on the x-axis. Unlike pie charts and bar charts, these plots do not have categories. Timeplots are good for showing how data changes over time.</p>
+    <p>This is the code used in Rstudio to make a time series using the lahman data set.</p>
 
-<p>First we will import the necessary packages:</p>
+<p># extracting the data&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</p>
+
+<p>query&lt;- &ldquo;SELECT yearID,HR
+FROM Batting
+WHERE playerID = &lsquo;ruthba01&rsquo;&rdquo;</p>
+
+<p>result&lt;- sqldf(query)</p>
+
+<p># visualize the data&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+
+<p>ggplot()+
+  geom_line(data=result,aes(x=yearID,y=HR))+
+  geom_point(data=result,aes(x=yearID,y=HR))+
+  ggtitle(&ldquo;Ruth&rsquo;s homerun Totals Through the Years&rdquo;)+
+  xlab(&ldquo;year&rdquo;)+
+  ylab(&ldquo;homeruns&rdquo;)</p>
 
   </div>
 </article>
@@ -215,7 +256,7 @@
     
     <div class="entry-meta">
          
-		<span class="entry-date date published updated"><time datetime="2013-06-25 00:00:00 &#43;0000 UTC"><a href="/posts/video-post/">Jun 25, 2013</a></time></span>
+		<span class="entry-date date published updated"><time datetime="2013-06-25 00:00:00 &#43;0000 UTC"><a href="/posts/barplot/">Jun 25, 2013</a></time></span>
         
       <span class="entry-reading-time">
         <i class="fa fa-clock-o"></i>
@@ -223,19 +264,34 @@
       </span>
     </div>
     
-	<h1 class="entry-title"><a href="/posts/video-post/" rel="bookmark" title="Barplot" itemprop="url">Barplot</a></h1>
+	<h1 class="entry-title"><a href="/posts/barplot/" rel="bookmark" title="Barplot" itemprop="url">Barplot</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>Data Visualization is an important concept in data science. Here we will be using a bar plot as an example of data visualization. A bar chart or bar graph is a chart or graph that presents categorical data with rectangular bars with heights or lengths proportional to the values that they represent.</p>
+    <p>This is the code used used in Rstudio to make a barplot using the lahman data set.</p>
 
-<p>First we will install the necessary packages for this example:</p>
+<p>standing&lt;-c(&lsquo;sophmore&rsquo;,&lsquo;sophmore&rsquo;,&lsquo;junior&rsquo;,&lsquo;freshman&rsquo;,&lsquo;junior&rsquo;,&lsquo;senior&rsquo;)
+standing&lt;-factor(standing,levels=c(&lsquo;freshman&rsquo;,&lsquo;sophmore&rsquo;,&lsquo;junior&rsquo;,&lsquo;senior&rsquo;))</p>
 
-<p>In this example we will be looking at all of the homerun totals of all of the teams in the MLB during the 1980&rsquo;s:</p>
+<p>#Extracting the data&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
 
-<p>This part of the example allows us to order the bar plot in any way we want:</p>
+<p>query&lt;-&ldquo;SELECT name,HR
+FROM Teams
+WHERE yearID=1980
+ORDER BY HR&rdquo;</p>
 
-<p>geom_bar allows us to make the height of the bar proportional to the number of cases in each group coord_flip() flips the axis of the plot</p>
+<p>result&lt;-sqldf(query)</p>
+
+<p>#visualizing the data&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</p>
+
+<p>ggplot()+
+  geom_bar(data=result,aes(x=name,y=HR),stat=&lsquo;identity&rsquo;,color=&lsquo;blue&rsquo;,fill=&lsquo;white&rsquo;)+
+  coord_flip()+
+  ylab(&lsquo;homeruns&rsquo;)+
+  xlab(&lsquo;team&rsquo;)+
+  ggtitle(&lsquo;1980 Team Homerun Distrubtion&rsquo;)</p>
+
+<p>result$name&lt;-factor(result$name,levels=result$name)</p>
 
   </div>
 </article>

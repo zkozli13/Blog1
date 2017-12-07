@@ -131,7 +131,7 @@
     
     <div class="entry-meta">
          
-		<span class="entry-date date published updated"><time datetime="2013-06-25 00:00:00 &#43;0000 UTC"><a href="/posts/video-post/">Jun 25, 2013</a></time></span>
+		<span class="entry-date date published updated"><time datetime="2013-06-25 00:00:00 &#43;0000 UTC"><a href="/posts/barplot/">Jun 25, 2013</a></time></span>
         
       <span class="entry-reading-time">
         <i class="fa fa-clock-o"></i>
@@ -139,19 +139,34 @@
       </span>
     </div>
     
-	<h1 class="entry-title"><a href="/posts/video-post/" rel="bookmark" title="Barplot" itemprop="url">Barplot</a></h1>
+	<h1 class="entry-title"><a href="/posts/barplot/" rel="bookmark" title="Barplot" itemprop="url">Barplot</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>Data Visualization is an important concept in data science. Here we will be using a bar plot as an example of data visualization. A bar chart or bar graph is a chart or graph that presents categorical data with rectangular bars with heights or lengths proportional to the values that they represent.</p>
+    <p>This is the code used used in Rstudio to make a barplot using the lahman data set.</p>
 
-<p>First we will install the necessary packages for this example:</p>
+<p>standing&lt;-c(&lsquo;sophmore&rsquo;,&lsquo;sophmore&rsquo;,&lsquo;junior&rsquo;,&lsquo;freshman&rsquo;,&lsquo;junior&rsquo;,&lsquo;senior&rsquo;)
+standing&lt;-factor(standing,levels=c(&lsquo;freshman&rsquo;,&lsquo;sophmore&rsquo;,&lsquo;junior&rsquo;,&lsquo;senior&rsquo;))</p>
 
-<p>In this example we will be looking at all of the homerun totals of all of the teams in the MLB during the 1980&rsquo;s:</p>
+<p>#Extracting the data&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
 
-<p>This part of the example allows us to order the bar plot in any way we want:</p>
+<p>query&lt;-&ldquo;SELECT name,HR
+FROM Teams
+WHERE yearID=1980
+ORDER BY HR&rdquo;</p>
 
-<p>geom_bar allows us to make the height of the bar proportional to the number of cases in each group coord_flip() flips the axis of the plot</p>
+<p>result&lt;-sqldf(query)</p>
+
+<p>#visualizing the data&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</p>
+
+<p>ggplot()+
+  geom_bar(data=result,aes(x=name,y=HR),stat=&lsquo;identity&rsquo;,color=&lsquo;blue&rsquo;,fill=&lsquo;white&rsquo;)+
+  coord_flip()+
+  ylab(&lsquo;homeruns&rsquo;)+
+  xlab(&lsquo;team&rsquo;)+
+  ggtitle(&lsquo;1980 Team Homerun Distrubtion&rsquo;)</p>
+
+<p>result$name&lt;-factor(result$name,levels=result$name)</p>
 
   </div>
 </article>

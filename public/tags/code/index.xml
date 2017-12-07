@@ -13,11 +13,16 @@
     
     <item>
       <title>Scatterplot</title>
-      <link>/posts/code-highlighting-post/</link>
+      <link>/posts/scatterplot/</link>
       <pubDate>Fri, 16 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>/posts/code-highlighting-post/</guid>
-      <description>Another way to visually represent data is by using a scatterplot. A scatterplot is a type of plot or mathematical diagram using Cartesian coordinates to display values for typically two variables for a set of data.</description>
+      <guid>/posts/scatterplot/</guid>
+      <description>This is the code used in rstudio to make barplots using the lahman dataset.
+extracting the data&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-
+query&amp;lt;- &amp;ldquo;SELECT playerID,sum(HR) as career_HR,sum(SO) as career_SO FROM Batting GROUP BY playerID HAVING sum(HR)&amp;gt;=400&amp;rdquo;
+result&amp;lt;- sqldf(query)
+visualizing the data&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
+ggplot()+ geom_point(data=result,aes(x=career_SO,y=career_HR,color=&amp;ldquo;blue&amp;rdquo;))+ ggtitle(&amp;ldquo;Career Strikeouts VS Homeruns for Great Hitters&amp;rdquo;)+ xlab(&amp;ldquo;Career Strikeouts&amp;rdquo;)+ ylab(&amp;ldquo;Career Homeruns&amp;rdquo;)</description>
     </item>
     
   </channel>

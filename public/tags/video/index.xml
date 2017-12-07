@@ -13,13 +13,18 @@
     
     <item>
       <title>Barplot</title>
-      <link>/posts/video-post/</link>
+      <link>/posts/barplot/</link>
       <pubDate>Tue, 25 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>/posts/video-post/</guid>
-      <description>Data Visualization is an important concept in data science. Here we will be using a bar plot as an example of data visualization. A bar chart or bar graph is a chart or graph that presents categorical data with rectangular bars with heights or lengths proportional to the values that they represent.
-First we will install the necessary packages for this example:
-In this example we will be looking at all of the homerun totals of all of the teams in the MLB during the 1980&amp;rsquo;s:</description>
+      <guid>/posts/barplot/</guid>
+      <description>This is the code used used in Rstudio to make a barplot using the lahman data set.
+standing&amp;lt;-c(&amp;lsquo;sophmore&amp;rsquo;,&amp;lsquo;sophmore&amp;rsquo;,&amp;lsquo;junior&amp;rsquo;,&amp;lsquo;freshman&amp;rsquo;,&amp;lsquo;junior&amp;rsquo;,&amp;lsquo;senior&amp;rsquo;) standing&amp;lt;-factor(standing,levels=c(&amp;lsquo;freshman&amp;rsquo;,&amp;lsquo;sophmore&amp;rsquo;,&amp;lsquo;junior&amp;rsquo;,&amp;lsquo;senior&amp;rsquo;))
+#Extracting the data&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-
+query&amp;lt;-&amp;ldquo;SELECT name,HR FROM Teams WHERE yearID=1980 ORDER BY HR&amp;rdquo;
+result&amp;lt;-sqldf(query)
+#visualizing the data&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
+ggplot()+ geom_bar(data=result,aes(x=name,y=HR),stat=&amp;lsquo;identity&amp;rsquo;,color=&amp;lsquo;blue&amp;rsquo;,fill=&amp;lsquo;white&amp;rsquo;)+ coord_flip()+ ylab(&amp;lsquo;homeruns&amp;rsquo;)+ xlab(&amp;lsquo;team&amp;rsquo;)+ ggtitle(&amp;lsquo;1980 Team Homerun Distrubtion&amp;rsquo;)
+result$name&amp;lt;-factor(result$name,levels=result$name)</description>
     </item>
     
   </channel>

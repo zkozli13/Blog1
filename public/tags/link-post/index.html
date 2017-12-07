@@ -131,7 +131,7 @@
     
     <div class="entry-meta">
          
-		<span class="entry-date date published updated"><time datetime="2013-08-12 00:00:00 &#43;0000 UTC"><a href="/posts/sample-link-post/">Aug 12, 2013</a></time></span>
+		<span class="entry-date date published updated"><time datetime="2013-08-12 00:00:00 &#43;0000 UTC"><a href="/posts/timeseries/">Aug 12, 2013</a></time></span>
         
       <span class="entry-reading-time">
         <i class="fa fa-clock-o"></i>
@@ -139,13 +139,28 @@
       </span>
     </div>
     
-	<h1 class="entry-title"><a href="/posts/sample-link-post/" rel="bookmark" title="Time Series" itemprop="url">Time Series</a></h1>
+	<h1 class="entry-title"><a href="/posts/timeseries/" rel="bookmark" title="Time Series" itemprop="url">Time Series</a></h1>
     
   </header>
   <div class="entry-content">
-    <p>The last way of visually representing data is through a time series plot. A time series plot displays values against time. They are similar to x-y graphs, but while an x-y graph can plot a variety of &ldquo;x&rdquo; variables (for example, height, weight, age), timeplots can only display time on the x-axis. Unlike pie charts and bar charts, these plots do not have categories. Timeplots are good for showing how data changes over time.</p>
+    <p>This is the code used in Rstudio to make a time series using the lahman data set.</p>
 
-<p>First we will import the necessary packages:</p>
+<p># extracting the data&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</p>
+
+<p>query&lt;- &ldquo;SELECT yearID,HR
+FROM Batting
+WHERE playerID = &lsquo;ruthba01&rsquo;&rdquo;</p>
+
+<p>result&lt;- sqldf(query)</p>
+
+<p># visualize the data&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+
+<p>ggplot()+
+  geom_line(data=result,aes(x=yearID,y=HR))+
+  geom_point(data=result,aes(x=yearID,y=HR))+
+  ggtitle(&ldquo;Ruth&rsquo;s homerun Totals Through the Years&rdquo;)+
+  xlab(&ldquo;year&rdquo;)+
+  ylab(&ldquo;homeruns&rdquo;)</p>
 
   </div>
 </article>
